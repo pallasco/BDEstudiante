@@ -1,15 +1,29 @@
 package com.distribuida.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
 
 public class Curso {
-		
+	@Component
+	@Entity 
+	@Table(name="curso")
+	@Id 
+	@GeneratedValue(strategy =GenerationType.IDENTITY)
+	@Column(name="id_curso")
 		private int idCurso;
-		
+	@Column(name="NombreCurso")
 		private String nombreCurso ;
-		
+	@Column(name="NumCurso")
 		private int numCurso;
-	
+	@Column(name="Horas")
 		private int horas;
+	@Column(name="Departamento")
 		
 		private String departamentos;
 		

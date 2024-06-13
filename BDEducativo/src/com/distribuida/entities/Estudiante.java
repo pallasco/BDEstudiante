@@ -1,15 +1,15 @@
 package com.distribuida.entities;
 
 public class Estudiante {
-	
+	@Column(name="id_estudiante")
 	private int idEstudiante;
-	
+	@Column(name="Nombre")
 	private String nombre ;
-	
+	@Column(name="NumEstud")
 	private int  numEstud;
-
+	@Column(name="clase")
 	private int clase;
-	
+	@Column(name="especialidad")
 	private String especialidad;
 	
 	public Estudiante() {
