@@ -9,10 +9,11 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+@Component
+@Entity 
+@Table(name="curso")
 public class Curso {
-	@Component
-	@Entity 
-	@Table(name="curso")
+	
 	@Id 
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	@Column(name="id_curso")
