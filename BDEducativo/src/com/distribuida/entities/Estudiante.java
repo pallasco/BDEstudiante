@@ -15,10 +15,10 @@ public class Estudiante {
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	@Column(name="id_estudiante")
 	private int idEstudiante;
-	@Column(name="Nombre")
+	@Column(name="nombre")
 	private String nombre ;
-	@Column(name="NumEstud")
-	private int  numEstud;
+	@Column(name="numestud")
+	private int  numestud;
 	@Column(name="clase")
 	private int clase;
 	@Column(name="especialidad")
@@ -28,10 +28,11 @@ public class Estudiante {
 		
 	}
 
-	public Estudiante(int idEstudiante, String nombre, int numEstud, int clase, String especialidad) {
+	public Estudiante(int idEstudiante, String nombre, int numestud, int clase, String especialidad) {
+		super();
 		this.idEstudiante = idEstudiante;
 		this.nombre = nombre;
-		this.numEstud = numEstud;
+		this.numestud = numestud;
 		this.clase = clase;
 		this.especialidad = especialidad;
 	}
@@ -52,12 +53,12 @@ public class Estudiante {
 		this.nombre = nombre;
 	}
 
-	public int getNumEstud() {
-		return numEstud;
+	public int getNumestud() {
+		return numestud;
 	}
 
-	public void setNumEstud(int numEstud) {
-		this.numEstud = numEstud;
+	public void setNumestud(int numestud) {
+		this.numestud = numestud;
 	}
 
 	public int getClase() {
@@ -78,11 +79,10 @@ public class Estudiante {
 
 	@Override
 	public String toString() {
-		return "Estudiante [idEstudiante=" + idEstudiante + ", nombre=" + nombre + ", numEstud=" + numEstud + ", clase="
+		return "Estudiante [idEstudiante=" + idEstudiante + ", nombre=" + nombre + ", numestud=" + numestud + ", clase="
 				+ clase + ", especialidad=" + especialidad + "]";
 	}
 
-	
 	
 	
 

@@ -19,10 +19,9 @@ public class Informecali {
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	@Column(name="id_informecali")
 	private int idInformecalif;
-	@Column(name="numestudiante")
-	private int numEstudiante;
-	@Column(name="idseccion")
-	private int  idSeccion;
+@Column (name = "numestudiante")
+	private int  numestudiante;
+	private Seccion seccion;
 	@Column(name="nota")
 	private String nota;
 	
@@ -31,10 +30,10 @@ public class Informecali {
 		
 	}
 
-	public Informecali(int idInformecalif, int numEstudiante, int idSeccion, String nota) {
+	public Informecali(int idInformecalif, int numestudiante, Seccion seccion, String nota) {
 		this.idInformecalif = idInformecalif;
-		this.numEstudiante = numEstudiante;
-		this.idSeccion = idSeccion;
+		this.numestudiante = numestudiante;
+		this.seccion = seccion;
 		this.nota = nota;
 	}
 
@@ -46,20 +45,20 @@ public class Informecali {
 		this.idInformecalif = idInformecalif;
 	}
 
-	public int getNumEstudiante() {
-		return numEstudiante;
+	public int getNumestudiante() {
+		return numestudiante;
 	}
 
-	public void setNumEstudiante(int numEstudiante) {
-		this.numEstudiante = numEstudiante;
+	public void setNumestudiante(int numestudiante) {
+		this.numestudiante = numestudiante;
 	}
 
-	public int getIdSeccion() {
-		return idSeccion;
+	public Seccion getSeccion() {
+		return seccion;
 	}
 
-	public void setIdSeccion(int idSeccion) {
-		this.idSeccion = idSeccion;
+	public void setSeccion(Seccion seccion) {
+		this.seccion = seccion;
 	}
 
 	public String getNota() {
@@ -72,10 +71,8 @@ public class Informecali {
 
 	@Override
 	public String toString() {
-		return "Informecali [idInformecalif=" + idInformecalif + ", numEstudiante=" + numEstudiante + ", idSeccion="
-				+ idSeccion + ", nota=" + nota + "]";
+		return "Informecali [idInformecalif=" + idInformecalif + ", numestudiante=" + numestudiante + ", seccion="
+				+ seccion + ", nota=" + nota + "]";
 	}
-	
-	
-	
+
 }

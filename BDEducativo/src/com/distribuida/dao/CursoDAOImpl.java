@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 
+
 import com.distribuida.entities.Curso;
+
+
 @Repository
 public class CursoDAOImpl implements CursoDAO{
 
@@ -20,7 +23,7 @@ public class CursoDAOImpl implements CursoDAO{
 	@Transactional
 	public List<Curso> findAll(){
 		Session session =sessionFactory.getCurrentSession();
-		return session.createQuery("from curso",Curso.class).getResultList();
+		return session.createQuery("from Curso",Curso.class).getResultList();
 		
 	}
 @Override

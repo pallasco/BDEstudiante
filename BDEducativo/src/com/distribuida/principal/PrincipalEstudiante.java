@@ -16,8 +16,8 @@ public class PrincipalEstudiante {
 
 	EstudianteDAO estudianteDAO =context.getBean("estudianteDAOImpl", EstudianteDAO.class);
 			
-		List<Estudiante> estudiante  = estudianteDAO.findAll();
-		estudiante.forEach(item -> {
+		List<Estudiante> estudiantes  = estudianteDAO.findAll();
+		estudiantes.forEach(item -> {
 			System.out.println(item.toString());
 		});
 		

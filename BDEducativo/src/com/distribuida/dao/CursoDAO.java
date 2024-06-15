@@ -14,4 +14,5 @@ public interface CursoDAO {
 	public void del(int id);
 
 	List<Curso> findAll();
+	
 }

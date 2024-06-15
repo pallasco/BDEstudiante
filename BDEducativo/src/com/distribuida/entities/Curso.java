@@ -1,5 +1,7 @@
 package com.distribuida.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,27 +20,25 @@ public class Curso {
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	@Column(name="id_curso")
 		private int idCurso;
-	@Column(name="NombreCurso")
-		private String nombreCurso ;
-	@Column(name="NumCurso")
-		private int numCurso;
-	@Column(name="Horas")
+	@Column(name="nombrecurso")
+		private String nombrecurso ;
+	@Column(name="numcurso")
+		private int numcurso;
+	@Column(name="horas")
 		private int horas;
-	@Column(name="Departamento")
-		
-		private String departamentos;
+	@Column(name="departamento")
+		private String departamento;
 		
 		public Curso() {
 			
 		}
 
-		public Curso(int idCurso, String nombreCurso, int numCurso, int horas, String departamentos) {
-			
+		public Curso(int idCurso, String nombrecurso, int numcurso, int horas, String departamento) {
 			this.idCurso = idCurso;
-			this.nombreCurso = nombreCurso;
-			this.numCurso = numCurso;
+			this.nombrecurso = nombrecurso;
+			this.numcurso = numcurso;
 			this.horas = horas;
-			this.departamentos = departamentos;
+			this.departamento = departamento;
 		}
 
 		public int getIdCurso() {
@@ -49,20 +49,20 @@ public class Curso {
 			this.idCurso = idCurso;
 		}
 
-		public String getNombreCurso() {
-			return nombreCurso;
+		public String getNombrecurso() {
+			return nombrecurso;
 		}
 
-		public void setNombreCurso(String nombreCurso) {
-			this.nombreCurso = nombreCurso;
+		public void setNombrecurso(String nombrecurso) {
+			this.nombrecurso = nombrecurso;
 		}
 
-		public int getNumCurso() {
-			return numCurso;
+		public int getNumcurso() {
+			return numcurso;
 		}
 
-		public void setNumCurso(int numCurso) {
-			this.numCurso = numCurso;
+		public void setNumcurso(int numcurso) {
+			this.numcurso = numcurso;
 		}
 
 		public int getHoras() {
@@ -73,21 +73,25 @@ public class Curso {
 			this.horas = horas;
 		}
 
-		public String getDepartamentos() {
-			return departamentos;
+		public String getDepartamento() {
+			return departamento;
 		}
 
-		public void setDepartamentos(String departamentos) {
-			this.departamentos = departamentos;
+		public void setDepartamento(String departamento) {
+			this.departamento = departamento;
 		}
 
 		@Override
 		public String toString() {
-			return "Curso [idCurso=" + idCurso + ", nombreCurso=" + nombreCurso + ", numCurso=" + numCurso + ", horas="
-					+ horas + ", departamentos=" + departamentos + "]";
+			return "Curso [idCurso=" + idCurso + ", nombrecurso=" + nombrecurso + ", numcurso=" + numcurso + ", horas="
+					+ horas + ", departamento=" + departamento + "]";
+		}
+
+		public List<Curso> findAll() {
+			// TODO Auto-generated method stub
+			return null;
 		}
 		
 
-		
 }
 
