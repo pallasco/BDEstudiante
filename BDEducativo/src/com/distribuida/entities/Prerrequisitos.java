@@ -9,18 +9,18 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-@Component
-@Entity 
-@Table(name="Prerrequisitos")
+//@Component
+//@Entity 
+//@Table(name="Prerrequisitos")
 public class Prerrequisitos {
 
-	@Id 
-	@GeneratedValue(strategy =GenerationType.IDENTITY)
-	@Column(name="id_prerrequisistos")
+//	@Id 
+//	@GeneratedValue(strategy =GenerationType.IDENTITY)
+//	@Column(name="id_prerrequisistos")
 	private int idPrerrequisitos;
-	@Column(name="numCurso")
+	//@Column(name="numCurso")
 	private String numCurso;
-	@Column(name="numPrerrequisito")
+	//@Column(name="numPrerrequisito")
 	private String numPrerrequisito;
 	
 	@SuppressWarnings("unused")

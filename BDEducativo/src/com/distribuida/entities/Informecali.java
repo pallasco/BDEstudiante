@@ -9,23 +9,23 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-@Component
-@Entity 
-@Table(name="Informecali")
+//@Component
+//@Entity 
+//@Table(name="Informecali")
 
 public class Informecali {
 
-	@Id 
-	@GeneratedValue(strategy =GenerationType.IDENTITY)
-	@Column(name="id_informecali")
+	//@Id 
+	//@GeneratedValue(strategy =GenerationType.IDENTITY)
+	//@Column(name="id_informecali")
 	private int idInformecalif;
-@Column (name = "numestudiante")
+//@Column (name = "numestudiante")
 	private int  numestudiante;
 	private Seccion seccion;
-	@Column(name="nota")
+	//@Column(name="nota")
 	private String nota;
 	
-	@SuppressWarnings("unused")
+	//@SuppressWarnings("unused")
 	private Informecali () {
 		
 	}

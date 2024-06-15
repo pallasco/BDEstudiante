@@ -8,9 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
-@Component
-@Entity 
-@Table(name="Seccion")
+//@Component
+//@Entity 
+//@Table(name="Seccion")
 public class Seccion {
 
 	// private int idSeccion;
@@ -19,17 +19,17 @@ public class Seccion {
 	// DI
 	// private Curso curso;
 
-		@Id 
-		@GeneratedValue(strategy =GenerationType.IDENTITY)
-		@Column(name="id_seccion")
+//		@Id 
+//		@GeneratedValue(strategy =GenerationType.IDENTITY)
+//		@Column(name="id_seccion")
 		private int idSeccion;
-		@Column(name="numCurso")
+		//@Column(name="numCurso")
 		private String numCurso;
-		@Column(name="semestre")
+		//@Column(name="semestre")
 		private String semestre;
-		@Column(name="año")
+		//@Column(name="año")
 		private int año;
-		@Column(name="profesor")
+		//@Column(name="profesor")
 		private String profesor;
 		
 		@SuppressWarnings("unused")

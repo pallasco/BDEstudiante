@@ -1,6 +1,6 @@
 package com.distribuida.entities;
 
-import java.util.List;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,7 +23,7 @@ public class Curso {
 	@Column(name="nombrecurso")
 		private String nombrecurso ;
 	@Column(name="numcurso")
-		private int numcurso;
+		private String numcurso;
 	@Column(name="horas")
 		private int horas;
 	@Column(name="departamento")
@@ -33,7 +33,7 @@ public class Curso {
 			
 		}
 
-		public Curso(int idCurso, String nombrecurso, int numcurso, int horas, String departamento) {
+		public Curso(int idCurso, String nombrecurso, String numcurso, int horas, String departamento) {
 			this.idCurso = idCurso;
 			this.nombrecurso = nombrecurso;
 			this.numcurso = numcurso;
@@ -57,11 +57,11 @@ public class Curso {
 			this.nombrecurso = nombrecurso;
 		}
 
-		public int getNumcurso() {
+		public String getNumcurso() {
 			return numcurso;
 		}
 
-		public void setNumcurso(int numcurso) {
+		public void setNumcurso(String numcurso) {
 			this.numcurso = numcurso;
 		}
 
@@ -87,11 +87,6 @@ public class Curso {
 					+ horas + ", departamento=" + departamento + "]";
 		}
 
-		public List<Curso> findAll() {
-			// TODO Auto-generated method stub
-			return null;
-		}
-		
-
+	
 }
 
